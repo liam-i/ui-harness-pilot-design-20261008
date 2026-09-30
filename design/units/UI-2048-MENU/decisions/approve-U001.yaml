@@ -1,0 +1,75 @@
+{
+  "schema_version": "ui-decision/1",
+  "decision_id": "approve-UI-2048-MENU-U001-20260930",
+  "kind": "approve",
+  "unit": "UI-2048-MENU",
+  "release": "U001",
+  "package_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+    "path": "design/units/UI-2048-MENU/releases/U001/manifest.yaml",
+    "sha256": "062a4887d998100c3bcda978f3b6630087b35b51206a5777ef1ccabaad9a18b2"
+  },
+  "closure_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "e0541e083c06deb694d091872b08e3499e9d72be",
+    "path": "reviews/candidate-closure.json",
+    "sha256": "b39774c0716420f68330610410a01eada96a6d99ab22a1a5dee0ef614c29e4c9"
+  },
+  "scope": {
+    "platforms": [
+      {
+        "target": "iOS 27.0 Simulator / SwiftUI",
+        "units": "pt; SE3 2x, iPhone17 Pro 3x",
+        "orientation": "portrait",
+        "reference_sizes": [
+          {
+            "device": "iPhone SE (3rd generation)",
+            "pt": [
+              375,
+              667
+            ]
+          },
+          {
+            "device": "iPhone 17 Pro",
+            "pt": [
+              402,
+              874
+            ]
+          }
+        ],
+        "locale": "English; OS chrome may follow simulator locale",
+        "constraints": "light appearance, default content size"
+      }
+    ],
+    "screen_states": [
+      "menu/default",
+      "menu/confirm-reset",
+      "game/board"
+    ]
+  },
+  "reviewers": [
+    {
+      "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+      "roles": [
+        "product",
+        "ui"
+      ],
+      "decision": "accepted",
+      "decided_at": "2026-09-30T16:59:19.787590+08:00",
+      "time_basis": "Local capture after receiving the actual user reply; platform did not expose exact message send time",
+      "evidence_path": "user-approval-U001.json",
+      "evidence_sha256": "6bd21a75e160955cbdd1c8f9c7a2399fbc3a3232cca80785cae279805de34b7f"
+    }
+  ],
+  "engineering_review_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "e0541e083c06deb694d091872b08e3499e9d72be",
+    "path": "reviews/engineering-feasibility.md",
+    "sha256": "bf0ce54b873ec353b9c53271a55989353209d6c0a82e160fea8ba47d91bb7479"
+  },
+  "limitations": [
+    "仅设计批准；不是规划Review、工程运行验收或阶段放行",
+    "人工身份依据为当前用户对绑定确切D问题的实际回复；未作第三方平台认证"
+  ]
+}
