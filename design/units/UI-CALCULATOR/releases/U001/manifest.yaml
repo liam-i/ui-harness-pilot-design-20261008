@@ -358,6 +358,19 @@
         "references/original-runtime-se.png",
         "references/original-runtime-pro.png"
       ]
+    },
+    {
+      "source_ref": {
+        "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+        "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+        "path": "inputs/sources.json",
+        "sha256": "7e65dd352f55ba50acf5bfa575f36f3a25ef7468eca0db05851546686bb5adfe"
+      },
+      "license": "provenance metadata; per-source licenses retained",
+      "transform": "保留来源/归档表，供scope与sources.md回读",
+      "outputs": [
+        "sources.md"
+      ]
     }
   ],
   "external_objects": [],
