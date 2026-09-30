@@ -1,0 +1,397 @@
+{
+  "schema_version": "ui-design/1",
+  "unit": "UI-CALCULATOR",
+  "release": "U001",
+  "producer": {
+    "mode": "mixed",
+    "tool_observation_ref": "sources.md"
+  },
+  "brief_ref": "brief.md",
+  "requirement_refs": [
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/app-scope.md",
+      "sha256": "ed8725c10f6a64a4371c174f7848ab0fc01122c4ca4c802cfbb0a43ce3603b1e"
+    }
+  ],
+  "platforms": [
+    {
+      "target": "iOS 27.0 Simulator / SwiftUI",
+      "units": "pt; SE3 2x, iPhone17 Pro 3x",
+      "orientation": "portrait",
+      "reference_sizes": [
+        {
+          "device": "iPhone SE (3rd generation)",
+          "pt": [
+            375,
+            667
+          ]
+        },
+        {
+          "device": "iPhone 17 Pro",
+          "pt": [
+            402,
+            874
+          ]
+        }
+      ],
+      "locale": "English; OS chrome may follow simulator locale",
+      "constraints": "light appearance, default content size"
+    }
+  ],
+  "screens": [
+    {
+      "id": "calc",
+      "states": [
+        "initial",
+        "input",
+        "result",
+        "clear",
+        "long",
+        "nonfinite",
+        "trig",
+        "pi",
+        "foreground"
+      ],
+      "handoff_path": "handoff.md"
+    }
+  ],
+  "states": [
+    {
+      "id": "calc/initial",
+      "reference": "references/original-runtime-se.png",
+      "parameters": "0.00；Pro布局参考original-runtime-pro.png"
+    },
+    {
+      "id": "calc/input",
+      "reference": "references/original-runtime-se.png",
+      "parameters": "23.00；原作者输入参考upstream-2.png"
+    },
+    {
+      "id": "calc/result",
+      "reference": "references/original-runtime-se.png",
+      "parameters": "expected A03–A06的显示值，布局不变"
+    },
+    {
+      "id": "calc/clear",
+      "reference": "references/original-runtime-se.png",
+      "parameters": "0.00且暂存为空"
+    },
+    {
+      "id": "calc/long",
+      "reference": "references/original-runtime-se.png",
+      "parameters": "1234567890.00，最多3行且完整"
+    },
+    {
+      "id": "calc/nonfinite",
+      "reference": "references/original-runtime-se.png",
+      "parameters": "inf或nan，清除恢复0.00"
+    },
+    {
+      "id": "calc/trig",
+      "reference": "references/original-runtime-se.png",
+      "parameters": "A11–A13：sin0=0、cos0=1、tan0=0"
+    },
+    {
+      "id": "calc/pi",
+      "reference": "references/original-runtime-se.png",
+      "parameters": "3.14"
+    },
+    {
+      "id": "calc/foreground",
+      "reference": "references/original-runtime-se.png",
+      "parameters": "同进程前后台保留23.00"
+    }
+  ],
+  "flows": [
+    {
+      "id": "calc-entry",
+      "from": "calc/initial",
+      "trigger": "数字或π",
+      "to": "calc/input",
+      "behavior_ref": "A02/A14"
+    },
+    {
+      "id": "calc-operation",
+      "from": "calc/input",
+      "trigger": "运算符→第二操作数→=",
+      "to": "calc/result",
+      "behavior_ref": "A03–A06"
+    },
+    {
+      "id": "calc-nonfinite",
+      "from": "calc/initial",
+      "trigger": "1或0÷0=",
+      "to": "calc/nonfinite",
+      "behavior_ref": "A09/A10"
+    },
+    {
+      "id": "calc-clear",
+      "from": "calc/nonfinite",
+      "trigger": "清除；其他状态同样可清除",
+      "to": "calc/clear",
+      "behavior_ref": "A07"
+    },
+    {
+      "id": "calc-trig",
+      "from": "calc/initial",
+      "trigger": "sin/cos/tan",
+      "to": "calc/trig",
+      "behavior_ref": "A11–A13"
+    }
+  ],
+  "coverage": [
+    {
+      "behavior_ref": "A01",
+      "screen_states": [
+        "calc/initial"
+      ]
+    },
+    {
+      "behavior_ref": "A02",
+      "screen_states": [
+        "calc/input"
+      ]
+    },
+    {
+      "behavior_ref": "A03",
+      "screen_states": [
+        "calc/result"
+      ]
+    },
+    {
+      "behavior_ref": "A04",
+      "screen_states": [
+        "calc/result"
+      ]
+    },
+    {
+      "behavior_ref": "A05",
+      "screen_states": [
+        "calc/result"
+      ]
+    },
+    {
+      "behavior_ref": "A06",
+      "screen_states": [
+        "calc/result"
+      ]
+    },
+    {
+      "behavior_ref": "A07",
+      "screen_states": [
+        "calc/clear"
+      ]
+    },
+    {
+      "behavior_ref": "A08",
+      "screen_states": [
+        "calc/long"
+      ]
+    },
+    {
+      "behavior_ref": "A09",
+      "screen_states": [
+        "calc/nonfinite"
+      ]
+    },
+    {
+      "behavior_ref": "A10",
+      "screen_states": [
+        "calc/nonfinite"
+      ]
+    },
+    {
+      "behavior_ref": "A11",
+      "screen_states": [
+        "calc/trig"
+      ]
+    },
+    {
+      "behavior_ref": "A12",
+      "screen_states": [
+        "calc/trig"
+      ]
+    },
+    {
+      "behavior_ref": "A13",
+      "screen_states": [
+        "calc/trig"
+      ]
+    },
+    {
+      "behavior_ref": "A14",
+      "screen_states": [
+        "calc/pi"
+      ]
+    },
+    {
+      "behavior_ref": "A15",
+      "screen_states": [
+        "calc/foreground"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "LICENSE-upstream.txt",
+      "media_type": "text/plain",
+      "sha256": "68e6220ac2a1aba3fbfb1f8397165ea4f84a0e29ae2793df29b51b8b85560bb0",
+      "bytes": 1073,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "brief.md",
+      "media_type": "text/markdown",
+      "sha256": "163383123e717516aeec51850175ec2521f4d4f8e75e49b0f1477c7353cca897",
+      "bytes": 1000,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "expected-copy.json",
+      "media_type": "application/json",
+      "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c",
+      "bytes": 2971,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "handoff.md",
+      "media_type": "text/markdown",
+      "sha256": "a74db5cfc93c7d44cbe9f503a754c3bfb20f7561e1ecc399635ccfa9fc8fe119",
+      "bytes": 1845,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "references/original-runtime-pro.png",
+      "media_type": "image/png",
+      "sha256": "99f1c4aeb3ed0e8b783d5eb4f327125844ad6007db7c35864be0e29b2aea28e0",
+      "bytes": 651340,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        1206,
+        2622
+      ]
+    },
+    {
+      "path": "references/original-runtime-se.png",
+      "media_type": "image/png",
+      "sha256": "5dfce1b101d2f85f0bc48bdd680968e0db1cbd3ff16f0bf010f97b496447b4f4",
+      "bytes": 317761,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        750,
+        1334
+      ]
+    },
+    {
+      "path": "references/source-images.json",
+      "media_type": "application/json",
+      "sha256": "a1d383afbe7bd888aae0ed52f0c60ed0389868b8f57cc85414a03d9219c9f546",
+      "bytes": 651,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "references/upstream-1.png",
+      "media_type": "image/png",
+      "sha256": "d43f471e56fb9b7b63f367eb1eb86bedca0f4c1244861b667ce163b85f947ace",
+      "bytes": 603348,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        1125,
+        2436
+      ]
+    },
+    {
+      "path": "references/upstream-2.png",
+      "media_type": "image/png",
+      "sha256": "db0674fb9a750faea86bdc65495e502b0e1da752d876cd68d39debc91c521882",
+      "bytes": 605937,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        1125,
+        2436
+      ]
+    },
+    {
+      "path": "sources.md",
+      "media_type": "text/markdown",
+      "sha256": "6be5a33e88cb5e66200581749c545ac13f5e5274084fe1d7056a5beb47c3b8dc",
+      "bytes": 1431,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "tokens.json",
+      "media_type": "application/json",
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d",
+      "bytes": 601,
+      "purpose": "runtime-asset",
+      "required_for_engineering": true
+    }
+  ],
+  "asset_inputs": [
+    {
+      "source_ref": {
+        "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+        "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+        "path": "inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip",
+        "sha256": "1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9"
+      },
+      "license": "MIT; LICENSE-upstream.txt",
+      "transform": "从固定SwiftUI源码提取视觉常量；源图保持原字节；当前截图为本次原工程启动观察",
+      "outputs": [
+        "tokens.json",
+        "handoff.md",
+        "references/upstream-1.png",
+        "references/upstream-2.png",
+        "references/original-runtime-se.png",
+        "references/original-runtime-pro.png"
+      ]
+    }
+  ],
+  "external_objects": [],
+  "acceptance": {
+    "handoff_path": "handoff.md",
+    "expected_ref": {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/app-expected.json",
+      "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+    },
+    "required_states": [
+      "calc/initial",
+      "calc/input",
+      "calc/result",
+      "calc/clear",
+      "calc/long",
+      "calc/nonfinite",
+      "calc/trig",
+      "calc/pi",
+      "calc/foreground"
+    ],
+    "allowed_differences": [
+      {
+        "id": "OS-RENDERING",
+        "basis": "原生系统栏/字体/符号/语义色、sheet/alert绘制以iOS27实际为准；不改变应用tokens、文案、布局约束和行为",
+        "review_path": "handoff.md"
+      }
+    ]
+  },
+  "limitations": [
+    "仅本轮iOS两尺寸、竖屏、浅色、默认字号；未验证其他平台或真机性能",
+    "原工程启动截图不是本包实现验收",
+    "没有企业设计团队审批；当前用户必须对本次D确认"
+  ],
+  "open_questions": []
+}

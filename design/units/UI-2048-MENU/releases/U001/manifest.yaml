@@ -1,0 +1,425 @@
+{
+  "schema_version": "ui-design/1",
+  "unit": "UI-2048-MENU",
+  "release": "U001",
+  "producer": {
+    "mode": "ai",
+    "tool_observation_ref": "sources.md"
+  },
+  "brief_ref": "brief.md",
+  "requirement_refs": [
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/game-scope.md",
+      "sha256": "d875543693192222bdf1cc867e1141999e90954ff70069d875e176ce95ed3ec2"
+    }
+  ],
+  "platforms": [
+    {
+      "target": "iOS 27.0 Simulator / SwiftUI",
+      "units": "pt; SE3 2x, iPhone17 Pro 3x",
+      "orientation": "portrait",
+      "reference_sizes": [
+        {
+          "device": "iPhone SE (3rd generation)",
+          "pt": [
+            375,
+            667
+          ]
+        },
+        {
+          "device": "iPhone 17 Pro",
+          "pt": [
+            402,
+            874
+          ]
+        }
+      ],
+      "locale": "English; OS chrome may follow simulator locale",
+      "constraints": "light appearance, default content size"
+    }
+  ],
+  "screens": [
+    {
+      "id": "menu",
+      "states": [
+        "default",
+        "confirm-reset"
+      ],
+      "handoff_path": "handoff.md"
+    },
+    {
+      "id": "game",
+      "states": [
+        "board"
+      ],
+      "handoff_path": "handoff.md"
+    }
+  ],
+  "states": [
+    {
+      "id": "menu/default",
+      "reference": "references/menu-se.png",
+      "parameters": "Pro版本menu-pro.png；SVG为可编辑原稿；系统sheet布局按handoff适配"
+    },
+    {
+      "id": "menu/confirm-reset",
+      "reference": "references/confirm-se.png",
+      "parameters": "系统Alert示意；Cancel/Yeah, whatever保持原回调"
+    },
+    {
+      "id": "game/board",
+      "reference": "references/original-runtime-se.png",
+      "parameters": "原棋盘上下文，非新设计；确定性数据按expected，Pro参考original-runtime-pro.png"
+    }
+  ],
+  "flows": [
+    {
+      "id": "open-menu",
+      "from": "game/board",
+      "trigger": "menuButton",
+      "to": "menu/default",
+      "behavior_ref": "B02"
+    },
+    {
+      "id": "close-menu",
+      "from": "menu/default",
+      "trigger": "向下滑动",
+      "to": "game/board",
+      "behavior_ref": "B03"
+    },
+    {
+      "id": "request-reset",
+      "from": "menu/default",
+      "trigger": "RESET BEST SCORE",
+      "to": "menu/confirm-reset",
+      "behavior_ref": "B04"
+    },
+    {
+      "id": "cancel-reset",
+      "from": "menu/confirm-reset",
+      "trigger": "Cancel",
+      "to": "menu/default",
+      "behavior_ref": "B05"
+    },
+    {
+      "id": "confirm-reset",
+      "from": "menu/confirm-reset",
+      "trigger": "Yeah, whatever",
+      "to": "game/board",
+      "behavior_ref": "B06"
+    },
+    {
+      "id": "new-game",
+      "from": "menu/default",
+      "trigger": "NEW GAME",
+      "to": "game/board",
+      "behavior_ref": "B07"
+    }
+  ],
+  "coverage": [
+    {
+      "behavior_ref": "B01",
+      "screen_states": [
+        "game/board"
+      ]
+    },
+    {
+      "behavior_ref": "B02",
+      "screen_states": [
+        "menu/default"
+      ]
+    },
+    {
+      "behavior_ref": "B03",
+      "screen_states": [
+        "game/board"
+      ]
+    },
+    {
+      "behavior_ref": "B04",
+      "screen_states": [
+        "menu/confirm-reset"
+      ]
+    },
+    {
+      "behavior_ref": "B05",
+      "screen_states": [
+        "menu/default"
+      ]
+    },
+    {
+      "behavior_ref": "B06",
+      "screen_states": [
+        "game/board"
+      ]
+    },
+    {
+      "behavior_ref": "B07",
+      "screen_states": [
+        "game/board"
+      ]
+    },
+    {
+      "behavior_ref": "B08",
+      "screen_states": [
+        "menu/default"
+      ]
+    },
+    {
+      "behavior_ref": "B09",
+      "screen_states": [
+        "game/board"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "LICENSE-kenney.txt",
+      "media_type": "text/plain",
+      "sha256": "69f7eaa5e05913b4d09cf5848f75390b5c3c9a409ef8555777803d9ca0c171fb",
+      "bytes": 565,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "LICENSE-upstream.txt",
+      "media_type": "text/plain",
+      "sha256": "5bc53ddeab53cc054f70be136768cd16fbb1b065739e7fa26b930786e2243afa",
+      "bytes": 1080,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "assets/menu-primary.png",
+      "media_type": "image/png",
+      "sha256": "0c43a01a95270167be8c05a68c45a2709e60177d9dfa59bedb56fd0802659e52",
+      "bytes": 784,
+      "purpose": "runtime-asset",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        384,
+        128
+      ]
+    },
+    {
+      "path": "assets/menu-secondary.png",
+      "media_type": "image/png",
+      "sha256": "f0f3d52f110768bf93a10b44f4ec3c727924c25734ce85e1275464c9b02cfe18",
+      "bytes": 786,
+      "purpose": "runtime-asset",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        384,
+        128
+      ]
+    },
+    {
+      "path": "brief.md",
+      "media_type": "text/markdown",
+      "sha256": "10b4975b1b66411b7ad7b6e3fa5e461795b26a9b7ef7ce5e9e5c5f9342204b09",
+      "bytes": 951,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "expected-copy.json",
+      "media_type": "application/json",
+      "sha256": "fb78734b0fba34e22c476e11340ba65a13458bc2c1a041c8bce4f48bc1a7e0c0",
+      "bytes": 2079,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "handoff.md",
+      "media_type": "text/markdown",
+      "sha256": "4a10e6f9f77e8a3128e89096d9198b9ad0fbd1e68af1e0c6dde04dba7ca9319d",
+      "bytes": 2435,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "iteration.md",
+      "media_type": "text/markdown",
+      "sha256": "1dedd1652156eb9da374b537e6ebc529bdf2bbf78354af8092327704d08fd21b",
+      "bytes": 1438,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "references/confirm-se.png",
+      "media_type": "image/png",
+      "sha256": "74b311f78fbb5b2cc05bbf0396672c505ef0ff6ca30db964774d1ba1da541496",
+      "bytes": 54231,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        750,
+        1246
+      ]
+    },
+    {
+      "path": "references/confirm-se.svg",
+      "media_type": "image/svg+xml",
+      "sha256": "2b455e974fbd96042fba20cd8675451bb3444753b538689c73bfbc47dd4fded7",
+      "bytes": 23261,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "references/menu-pro.png",
+      "media_type": "image/png",
+      "sha256": "33734f1d5705d6a815878db65e672beeb01441cdbe25348f23e44ac1e53050ff",
+      "bytes": 53525,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        804,
+        1576
+      ]
+    },
+    {
+      "path": "references/menu-pro.svg",
+      "media_type": "image/svg+xml",
+      "sha256": "c29050b9a73bb4db29ef01dc42dcefe925a0a58a8b9f28a515b5833acae739bb",
+      "bytes": 22634,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "references/menu-se.png",
+      "media_type": "image/png",
+      "sha256": "40608b865213c1e808ff1a8847a06dc7c3a333788ce2cdc624cf7d1bc322de3e",
+      "bytes": 44307,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        750,
+        1246
+      ]
+    },
+    {
+      "path": "references/menu-se.svg",
+      "media_type": "image/svg+xml",
+      "sha256": "96957bbbdada541e1e72f6c8149376a521cfc5dc44b7444c69965adb591812fa",
+      "bytes": 22634,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "references/original-runtime-pro.png",
+      "media_type": "image/png",
+      "sha256": "45703047e80d7c0e75bd63a0070d0b089389c62721206e7e10c4ba62ab30de26",
+      "bytes": 139076,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        1206,
+        2622
+      ]
+    },
+    {
+      "path": "references/original-runtime-se.png",
+      "media_type": "image/png",
+      "sha256": "ca10595650b327dfc8bff5af2c1a0caf9ea0f00a99384665f157e0c33d48bf9b",
+      "bytes": 70613,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        750,
+        1334
+      ]
+    },
+    {
+      "path": "references/preview.html",
+      "media_type": "text/html",
+      "sha256": "563a2150827646a6eefa81bbd105f21654b157dec2392b38fdb4cd423594bf77",
+      "bytes": 1194,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": false
+    },
+    {
+      "path": "sources.md",
+      "media_type": "text/markdown",
+      "sha256": "b13bb600733437ae559b4557fa2051c225cf03d9c5e8dd6a9600e36b95c943a5",
+      "bytes": 1583,
+      "purpose": "reference-and-handoff",
+      "required_for_engineering": true
+    },
+    {
+      "path": "tokens.json",
+      "media_type": "application/json",
+      "sha256": "3184b8ee1b57ce2bcba7cdf9940fbae83cecba7b5792bfd24bedea8564c902fc",
+      "bytes": 538,
+      "purpose": "runtime-asset",
+      "required_for_engineering": true
+    }
+  ],
+  "asset_inputs": [
+    {
+      "source_ref": {
+        "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+        "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+        "path": "inputs/archives/game-aba3d8522bc1e615cd5dd73801150ae54d25e78b.zip",
+        "sha256": "2b5515de435124b21932e37948296f2407d9fed280414ae1feda2a0677e04e9a"
+      },
+      "license": "MIT; LICENSE-upstream.txt",
+      "transform": "读取既有状态/回调，截图仅观察原棋盘",
+      "outputs": [
+        "handoff.md",
+        "references/original-runtime-se.png",
+        "references/original-runtime-pro.png"
+      ]
+    },
+    {
+      "source_ref": {
+        "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+        "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+        "path": "inputs/archives/kenney_ui-pack.zip",
+        "sha256": "a8a14a234911eb648c062622915c93e79e94e97cb7f9f375a70f6617f1174318"
+      },
+      "license": "CC0; LICENSE-kenney.txt",
+      "transform": "Yellow/Double与Grey/Double/button_rectangle_depth_flat.png原字节复制；SVG派生为9-slice示意，PNG由该SVG离线渲染",
+      "outputs": [
+        "assets/menu-primary.png",
+        "assets/menu-secondary.png",
+        "references/menu-se.svg",
+        "references/menu-pro.svg",
+        "references/confirm-se.svg",
+        "references/menu-se.png",
+        "references/menu-pro.png",
+        "references/confirm-se.png"
+      ]
+    }
+  ],
+  "external_objects": [],
+  "acceptance": {
+    "handoff_path": "handoff.md",
+    "expected_ref": {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/game-expected.json",
+      "sha256": "fb78734b0fba34e22c476e11340ba65a13458bc2c1a041c8bce4f48bc1a7e0c0"
+    },
+    "required_states": [
+      "menu/default",
+      "menu/confirm-reset",
+      "game/board"
+    ],
+    "allowed_differences": [
+      {
+        "id": "OS-RENDERING",
+        "basis": "原生系统栏/字体/符号/语义色、sheet/alert绘制以iOS27实际为准；不改变应用tokens、文案、布局约束和行为",
+        "review_path": "handoff.md"
+      }
+    ]
+  },
+  "limitations": [
+    "仅本轮iOS两尺寸、竖屏、浅色、默认字号；未验证其他平台或真机性能",
+    "原工程启动截图不是本包实现验收",
+    "没有企业设计团队审批；当前用户必须对本次D确认"
+  ],
+  "open_questions": []
+}
