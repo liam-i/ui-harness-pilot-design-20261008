@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-09-30T16:32:03+08:00",
+  "root": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx",
+  "sources": [
+    {
+      "name": "app",
+      "repository": "https://github.com/TarokhDev2020/Calculator-for-SwiftUI",
+      "ref": "master",
+      "commit": "a1f33650f3adcf7f89e8d403dd469dff7d57c6b1",
+      "commit_date": "2020-10-29T07:23:05Z",
+      "url": "https://codeload.github.com/TarokhDev2020/Calculator-for-SwiftUI/zip/a1f33650f3adcf7f89e8d403dd469dff7d57c6b1",
+      "bytes": 36669,
+      "sha256": "1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9",
+      "files": 19,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "retained_archive": "inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip"
+    },
+    {
+      "name": "game",
+      "repository": "https://github.com/caiobzen/2048-swiftui",
+      "ref": "master",
+      "commit": "aba3d8522bc1e615cd5dd73801150ae54d25e78b",
+      "commit_date": "2020-03-19T13:41:30Z",
+      "url": "https://codeload.github.com/caiobzen/2048-swiftui/zip/aba3d8522bc1e615cd5dd73801150ae54d25e78b",
+      "bytes": 1106929,
+      "sha256": "2b5515de435124b21932e37948296f2407d9fed280414ae1feda2a0677e04e9a",
+      "files": 76,
+      "license_api": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "retained_archive": "inputs/archives/game-aba3d8522bc1e615cd5dd73801150ae54d25e78b.zip"
+    },
+    {
+      "name": "kenney-ui-pack",
+      "source_page": "https://kenney.nl/assets/ui-pack",
+      "url": "https://kenney.nl/media/pages/assets/ui-pack/f651646eab-1718203990/kenney_ui-pack.zip",
+      "bytes": 1229750,
+      "sha256": "a8a14a234911eb648c062622915c93e79e94e97cb7f9f375a70f6617f1174318",
+      "files": 1315,
+      "retained_archive": "inputs/archives/kenney_ui-pack.zip"
+    }
+  ],
+  "download_only": true,
+  "built_or_executed": false
+}
