@@ -1,0 +1,37 @@
+{
+  "source": "Actual human message in the current Codex thread",
+  "thread_id": "01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+  "answer": "设计通过",
+  "recorded_at": "2026-10-09T13:37:34.071176+08:00",
+  "time_basis": "Local capture after receiving the actual user reply; platform did not expose exact message send time",
+  "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+  "roles": [
+    "product",
+    "ui"
+  ],
+  "package_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "c0156a9bbe28a80ae39f55a93132c459e3476190",
+    "path": "design/units/UI-OD-COCOS-MENU/releases/U001/manifest.yaml",
+    "sha256": "d2cd2f77e757633539c7b84a66c71abb6b644db574ef00e60f3d1081effe09f3"
+  },
+  "closure_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "68faa1be555d90fc23ca773922a7a7b19c26a15b",
+    "path": "reviews/supplementary-20261009/candidate-closure-02.json",
+    "sha256": "b5a7910351212cf857bc2505ede9987135160add85ddfdaf248926ce561f3959"
+  },
+  "policy_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "03eefa28dc36a22e807a5c8147359ddf0be97d9f",
+    "path": "reviews/supplementary-20261009/policy.json",
+    "sha256": "bba599d11d0e6d6be602e2fdef50f785483b243910ecd193ca13cfbdb4ba9753"
+  },
+  "reviewed_page": {
+    "path": "/Users/liam/Developer/workflow.md/ai-native-sdlc/engineering-harness/tests/ui-design/evidence/supplementary-20261009/open-design-review/README.md",
+    "sha256": "834d567e93f58a7025cc35034ef6bcf9e803bddabfc1d34691b59cfb9a101040",
+    "content": "# open-design → Cocos Android 设计审核\n\n2026-10-09。待用户审核；没有保存批准 A，也没有启动菜单工程实现。\n\n**先看[两尺寸交互预览](package/references.html)，再确认下面三项即可。** 预览提供七种状态，可切换菜单、重置弹窗及会话画面；也可直接点击 New game、Menu、Continue、Cancel 和 Reset。预览是设计参考，原生运行另行验收。\n\n## 本次确认什么\n\n1. 菜单、弹窗及静态会话画面的布局、颜色、文案和交互是否符合本次验证目的。两种画布分别对应已核查的小屏和常规屏 Android 模拟器。\n2. 范围限于设计交接与菜单流程：无完整 2048 玩法、后端、付费或存档。重置只清零 best，不删除已有会话；Back、前后台、字号、方向等要求见[交接说明](package/handoff.md)。后续每台设备执行 16 项、共 32 项独立用例，目前设备端 UI 验收仍为 0。\n3. 沿用当前用户的产品/UI 审核角色和既有设计权威仓库；[候选权威约定](fixed-inputs/77edfd556a27df96afb16197fe3f59bb48ead340/inputs/supplementary-20261009/authority.md)及[固定 policy](policy.json)随本包审核。旧包和旧批准保持原样。\n\n回复“设计通过”表示批准下面固定 D 的整个设计闭包和上述范围。若需调整，直接说明画面或行为。设计批准不包含工程 Apply、远程推送或最终运行验收；工程规划随后沿原 Harness 入口审阅。\n\n## 固定内容\n\n| 对象 | 固定身份与材料 |\n| --- | --- |\n| UI 单元／修订 | `UI-OD-COCOS-MENU/U001` |\n| 最终候选内容 D | `c0156a9bbe28a80ae39f55a93132c459e3476190` |\n| 清单 | [manifest.yaml](package/manifest.yaml)，SHA-256 `d2cd2f77e757633539c7b84a66c71abb6b644db574ef00e60f3d1081effe09f3` |\n| 闭包 | [完整报告](candidate-closure.json)，提交 `68faa1be555d90fc23ca773922a7a7b19c26a15b`，SHA-256 `b5a7910351212cf857bc2505ede9987135160add85ddfdaf248926ce561f3959` |\n| 权威 policy | [policy.json](policy.json)，提交 `03eefa28dc36a22e807a5c8147359ddf0be97d9f`，SHA-256 `bba599d11d0e6d6be602e2fdef50f785483b243910ecd193ca13cfbdb4ba9753` |\n| 完整设计文件 | [ZIP](design-candidate.zip)，20,912 bytes，SHA-256 `6848446a71a3678a3a64fb48482f930c81097b7483bf20a43041d301355e9055` |\n| 完整 Git 对象与历史 | [bundle](design-candidate.bundle)，4,516,371 bytes，SHA-256 `d6a180b82e006be2df58c7a86fcc8c42080a6caa6f971db668706fd69572fd19` |\n\n[Brief](package/brief.md)、[交接说明](package/handoff.md)、[tokens](package/tokens.json)、[独立预期副本](package/expected-copy.json)、[来源](package/sources.md)、[迭代](package/iteration.md)及两张 CC0 PNG 均在清单中。独立预期在设计 D 之前固定；原素材归档、许可、需求范围和实际工具观察列入闭包。没有活动 URL 或设计工具作为必需文件依赖。\n\n## 已完成的核查与限制\n\n- 实际 MCP 完成制作、修订、完整取包、停止后恢复和重开回读；13 个文件摘要一致。JSON 创建接口的失败及修正过程保留在[工具记录](../od-candidate-read-04.json)。\n- [浏览器检查](../od-prototype-review-04.json)覆盖七种状态和两种画布，实点检查取消、重置、新游戏及继续。这里不把 DOM 结果换算为设备端测试。\n- [独立恢复](recovery-check.json)从本页 bundle 取得完整历史，核对清单、13 文件和全部固定输入，执行原有包/媒体/历史规则。没有伪造 A 来运行消费检查器。\n- 审核前复查发现流程表没有明确区分 best=0 时的返回／取消目标，已修正清单条件；13 个制作文件、画面和测试分母不变。原未审 D `09ebfed2ffb414745206b36af2c80417392b1175` 及其闭包保留，[修正记录](../od-candidate-fixed-02.json)给出两次固定引用。本次只审核表中最终 D。\n- Cocos Android 空场景工具链已核查；本菜单的 Scene、资源导入、模拟器交互、真实 CI 和运行验收尚待后续实施。Figma、Unity 及 Android App 分支的完成状态不由本页推定。\n\n## 恢复方式\n\n预览目录可直接离线打开；若浏览器限制本地 iframe，可在本目录启动仅监听本机的临时静态服务：\n\n```bash\npython3 -m http.server 17652 --bind 127.0.0.1\n```\n\n然后打开 `http://127.0.0.1:17652/package/references.html`。此命令只提供已固定文件的预览，不启动设计工具。结束预览后停止该临时服务。\n\n在新的空目录恢复完整候选历史：\n\n```bash\ngit clone --branch codex/supplementary-menu-20261009 \\\n  /absolute/path/to/design-candidate.bundle /new/empty/review-copy\n```\n\n读取前核对本页 bundle 摘要，恢复后以完整 D／闭包引用复查，不能用工作区“最新文件”替代。`fixed-inputs/` 只是便于阅读的固定对象副本；各对象完整身份仍以闭包与 policy 为准。\n"
+  },
+  "scope": "Approval of the fixed D, complete design closure, displayed scope and authority policy. Does not authorize engineering Apply, remote push, or final runtime acceptance.",
+  "not_approval": "The preceding statement 真实人审批准这个 D 后才能保存 A 和发布；AI 不代签。 reiterated the rule only; this record uses the subsequent explicit 设计通过 reply."
+}

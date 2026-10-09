@@ -1,0 +1,80 @@
+{
+  "schema_version": "ui-decision/1",
+  "decision_id": "approve-UI-OD-COCOS-MENU-U001-20261009",
+  "kind": "approve",
+  "unit": "UI-OD-COCOS-MENU",
+  "release": "U001",
+  "package_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "c0156a9bbe28a80ae39f55a93132c459e3476190",
+    "path": "design/units/UI-OD-COCOS-MENU/releases/U001/manifest.yaml",
+    "sha256": "d2cd2f77e757633539c7b84a66c71abb6b644db574ef00e60f3d1081effe09f3"
+  },
+  "closure_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "68faa1be555d90fc23ca773922a7a7b19c26a15b",
+    "path": "reviews/supplementary-20261009/candidate-closure-02.json",
+    "sha256": "b5a7910351212cf857bc2505ede9987135160add85ddfdaf248926ce561f3959"
+  },
+  "scope": {
+    "platforms": [
+      {
+        "target": "Cocos Creator 3.8.8 Android arm64-v8a; Android 17/API 37 simulator only",
+        "units": "375 UI-unit FIT_WIDTH canvas; px = UI units * actual render width / 375",
+        "orientation": "portrait",
+        "locale": "en",
+        "reference_sizes": [
+          {
+            "device": "Harness_UI_Small_20261009",
+            "px": [
+              720,
+              1280
+            ]
+          },
+          {
+            "device": "Harness_UI_Regular_20261009",
+            "px": [
+              1080,
+              2400
+            ]
+          }
+        ],
+        "constraints": "See brief.md and independently fixed expected: density 320/420, 16 KB pages, exact fingerprint; no physical-device claim."
+      }
+    ],
+    "screen_states": [
+      "menu/default",
+      "menu/resumable",
+      "menu/zero-empty",
+      "menu/zero-resumable",
+      "dialog/reset-empty",
+      "dialog/reset-resumable",
+      "session/active"
+    ]
+  },
+  "reviewers": [
+    {
+      "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+      "roles": [
+        "product",
+        "ui"
+      ],
+      "decision": "accepted",
+      "decided_at": "2026-10-09T13:37:34.071176+08:00",
+      "time_basis": "Local capture after receiving the actual user reply; platform did not expose exact message send time",
+      "evidence_path": "user-approval-U001.json",
+      "evidence_sha256": "f134dcb2c421f47c5adabbd22787a65ade94713c1e74b48f042ebf55d646596b"
+    }
+  ],
+  "engineering_review_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "77edfd556a27df96afb16197fe3f59bb48ead340",
+    "path": "inputs/supplementary-20261009/feasibility.md",
+    "sha256": "527cd61a4b080b3b864545aeb2243f38b60bf3784fb4ddc165b2344110f8862b"
+  },
+  "limitations": [
+    "仅设计批准；工程 Review／Apply、远程推送及最终运行验收按原入口分别确认。",
+    "人工身份依据为当前线程用户的真实回复；未作第三方平台认证。",
+    "固定设计和闭包中尚未批准等描述保留制作时语境；本决定不回写已审内容。"
+  ]
+}
