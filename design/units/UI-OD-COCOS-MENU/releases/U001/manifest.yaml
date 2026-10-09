@@ -115,7 +115,7 @@
     {
       "id": "return",
       "from": "session/active",
-      "trigger": "Menu or Android Back; retain existing best",
+      "trigger": "Menu or Android Back when best=128",
       "to": "menu/resumable",
       "behavior_ref": "scope.md#menu"
     },
@@ -143,14 +143,14 @@
     {
       "id": "cancel-empty",
       "from": "dialog/reset-empty",
-      "trigger": "Cancel or Android Back",
+      "trigger": "Cancel or Android Back when best=128",
       "to": "menu/default",
       "behavior_ref": "scope.md#menu"
     },
     {
       "id": "cancel-session",
       "from": "dialog/reset-resumable",
-      "trigger": "Cancel or Android Back",
+      "trigger": "Cancel or Android Back when best=128",
       "to": "menu/resumable",
       "behavior_ref": "scope.md#menu"
     },
@@ -180,6 +180,41 @@
       "from": "menu/zero-empty",
       "trigger": "New game",
       "to": "session/active",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "return-zero",
+      "from": "session/active",
+      "trigger": "Menu or Android Back when best=0",
+      "to": "menu/zero-resumable",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "ask-zero-empty",
+      "from": "menu/zero-empty",
+      "trigger": "Reset best score; dialog retains best=0",
+      "to": "dialog/reset-empty",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "ask-zero-session",
+      "from": "menu/zero-resumable",
+      "trigger": "Reset best score; dialog retains best=0",
+      "to": "dialog/reset-resumable",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "cancel-zero-empty",
+      "from": "dialog/reset-empty",
+      "trigger": "Cancel or Android Back when best=0",
+      "to": "menu/zero-empty",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "cancel-zero-session",
+      "from": "dialog/reset-resumable",
+      "trigger": "Cancel or Android Back when best=0",
+      "to": "menu/zero-resumable",
       "behavior_ref": "scope.md#menu"
     }
   ],
