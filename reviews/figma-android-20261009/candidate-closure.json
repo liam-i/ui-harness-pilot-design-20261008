@@ -1,0 +1,318 @@
+{
+  "checked_at": "2026-10-09T10:45:05.089884+00:00",
+  "method": "Candidate-only unchanged locked models/media/Store/Validator.package and complete history scan; distinct fixed references in closure; no fake approval, consumer checker or current-authority PASS.",
+  "content_commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+  "packages": [
+    {
+      "unit": "UI-FIGMA-ANDROID-MENU",
+      "package_ref": {
+        "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+        "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+        "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/manifest.yaml",
+        "sha256": "f14d153cd88a8d60a898c414876eec1f440520855840ee323c288d3da0f0cb55"
+      },
+      "files": [
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/assets/asset-arrow.png",
+          "sha256": "4679df5d9e43ec326cf339f1674b5b24693ee9498767e3ad9a0292d0e5aba5e4"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/assets/asset-arrow.svg",
+          "sha256": "17ef506ec82352e1a8baa357f22aa97eb47f50a3d0ab61d9486b416129f99cd2"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/assets/asset-reset.png",
+          "sha256": "7fb2df2ba768b634bf1ae49bfe556fcbcfc36d5179800a08e83bdc487e71440f"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/assets/asset-reset.svg",
+          "sha256": "02a9d2cf24122cfcfa199a937705784220f7e6b03b5abefa47e2a9be99d7a07c"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/brief.md",
+          "sha256": "03efc355518c156d17e234546b3dec57455e4389f992ffb459412654a9d2ec42"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/expected-copy.json",
+          "sha256": "29b47ae955ab09ac1e0dc44198f5a1e206135d0df3d0c748e8841af461322e67"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/handoff.md",
+          "sha256": "22deacd3bed42e1c7d1a05f63e68d92d5baad04f5ee6b32c4ece170c4887f9e7"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/iteration.md",
+          "sha256": "28652779ce4f0f7189f9b7eea4b0118784af722aaa58cd0b5b24956db659bc93"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/reference-geometry.json",
+          "sha256": "099f288e7240ee24f4c6d7ccdf7e9b2028a09692b1ca383d2805478efc550ed3"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-dialog-reset-empty.png",
+          "sha256": "f7d7ac3edf7e62259796748779708b506bd22e49e207a092f8cc5a85782c6c6a"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-dialog-reset-empty.svg",
+          "sha256": "e0ad37c0318c0e217840ccf45b9d382b31bd9997c4a681be9eb3ec10389b48e0"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-menu-default.png",
+          "sha256": "09b8c5472869b6e5d4386e980d20b7abc7407f62c1b6494b34a64bf6ee11d785"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-menu-default.svg",
+          "sha256": "a1a97d8c75aee27cc6f8e2b660bc3e14509843da375af259f66eb78903fa1578"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-session-active.png",
+          "sha256": "bb3e7008c20c31fd600ad71b036b20aad482a985fdf6688b27ea2f2d3e3d38c5"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-session-active.svg",
+          "sha256": "6d01f26fe43489a0e933c01d72c780bd101024385f664dff16a46ff58555bcaf"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-dialog-reset-empty.png",
+          "sha256": "36de51c76d645487a509bad537a8902745069b09a092f2e8801eccf92e599e13"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-dialog-reset-empty.svg",
+          "sha256": "a8908335c0e181adf2b73ae941584580ef58b3e7a1d1749ce248fefe1636624b"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-menu-default.png",
+          "sha256": "3adfc11fc4886ee4e7739a89dd0e69cbe371a6c62529e88502d1951c01240fb6"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-menu-default.svg",
+          "sha256": "7ad2fc800e4e23b0f530fa471b60108f82f0fe0f356ff16f4079b691a5d56e5a"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-session-active.png",
+          "sha256": "960d31a23d2f184c6456deeba65a01e8bd072cdc1dd45b4294abeaa97b213f28"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-session-active.svg",
+          "sha256": "5a1bed5d603d9a0ddad6d12ba388af486351a5ff434e36787cc5418eb525c549"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-dialog-reset-empty.png",
+          "sha256": "456bf07486f5b45912a0ae94cdbdbbee2fa3336137b7775cd9dde862ab98c79c"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-dialog-reset-empty.svg",
+          "sha256": "594e3e6cd091cc1d47f78926ebad008524a70f7ddc55c0be283f1ed1d3a5269d"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-dialog-reset-resumable.png",
+          "sha256": "456bf07486f5b45912a0ae94cdbdbbee2fa3336137b7775cd9dde862ab98c79c"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-dialog-reset-resumable.svg",
+          "sha256": "7a29de6607f8c38f0ab95492dcdf1a3e86e8961ed71fa62eaceffbff87b422a9"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-default.png",
+          "sha256": "003d106b57ab9fe14672c5acb88d34a86b2773591c06cb0002fae6a80cc97c7a"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-default.svg",
+          "sha256": "d359c62c03e1dc6cc5da57060e2aac162a6207a9ebd219ffe665b0177991fbdd"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-resumable.png",
+          "sha256": "efa3d840c8aad3225f94c0aa934158662a470182b9c843a29c189fcd461c0d54"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-resumable.svg",
+          "sha256": "f976fe4b4ee301ae45da0e5846af8c584b94022307544a68ce29f48c43d96e52"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-zero-empty.png",
+          "sha256": "2b8190a586be793e08d98e5fbfa621f99f9adc2b2174f353b2d6e0ba31b4f4e5"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-zero-empty.svg",
+          "sha256": "182082862cf992960c5311f2532b085f4adff0b0aa8d996167811f001fc3422b"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-zero-resumable.png",
+          "sha256": "8df94b5bcf0e54ad23345653c96772e3d76ea34c7ab45130214ea7a937a97ad1"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-zero-resumable.svg",
+          "sha256": "795d656c56c197645c9ae158d90dacdb17500376435dedee72d1c8a5c3a68b49"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-session-active.png",
+          "sha256": "ac339aab5405fe88851a10f60f5ffd655799eb5252d861c081333bdec5c22f10"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-session-active.svg",
+          "sha256": "9b4f444a4f1aa8867d71bb24971a07f768ac28e96dbad79d472be47c0f5c64c9"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-dialog-reset-empty.png",
+          "sha256": "e03b6253093585b88056cb9662482e0e785eed38ca10b3ef87c8777599472a1f"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-dialog-reset-empty.svg",
+          "sha256": "94ea322aca48ad6a35b711dac0b638aee0372d643f7d83187a4b75dcff5eada3"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-menu-default.png",
+          "sha256": "3c4cc100ee503313fa5f0293623a8d1b8374aebc9edac4947fc4cf1bf224cf5d"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-menu-default.svg",
+          "sha256": "7f5f8885030ff7bf67ae8fa18bc13d4446ef42d13e6e40e46094ddce7425f7f7"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-session-active.png",
+          "sha256": "43f98fcf1837503f3fedbfbb61e6dc4f5af104c20c27abee37a30694d45b5658"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-session-active.svg",
+          "sha256": "19e91450a262c82764d71da052f997eea4b3173c890a5a4dd63811b1bf6c36b9"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references.html",
+          "sha256": "25a44c5810053570db768582bced392d1155d2acc5febc84d97fecabb2ae6f20"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/source/native-source.fig",
+          "sha256": "f5b352b2958ef5d80ba898ac4ac54718fe1a1cedb67fef5eee0422129108529c"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/sources.md",
+          "sha256": "deade027825d63ae3beaaf94b3373709689c59faaa3da6524b34a7e66616f755"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/tokens.json",
+          "sha256": "cd1095044ca4e5e270dc788a43b76615bb37b6adc62cd708a888809c0c56eb72"
+        }
+      ],
+      "external_inputs": [
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "191cd85b86f9ddf3f3ba1e759c9527794afc540d",
+          "path": "inputs/figma-android-20261009/scope.md",
+          "sha256": "9ff514d8bff8f154df9a58e5618cdbed43d5010e14a2dffff1ae1cd3cc64e12b"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "191cd85b86f9ddf3f3ba1e759c9527794afc540d",
+          "path": "inputs/figma-android-20261009/expected.json",
+          "sha256": "29b47ae955ab09ac1e0dc44198f5a1e206135d0df3d0c748e8841af461322e67"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "191cd85b86f9ddf3f3ba1e759c9527794afc540d",
+          "path": "inputs/figma-android-20261009/tool-observations.zip",
+          "sha256": "80a76ff561bd5a05339b3179852a9e2bed280fd193ea8eee96ec622f67de2747"
+        }
+      ],
+      "dependencies": [],
+      "external_objects": [],
+      "approval": "absent; exact human D review required"
+    }
+  ],
+  "policy_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "03eefa28dc36a22e807a5c8147359ddf0be97d9f",
+    "path": "reviews/supplementary-20261009/policy.json",
+    "sha256": "bba599d11d0e6d6be602e2fdef50f785483b243910ecd193ca13cfbdb4ba9753"
+  },
+  "result": "45 files, 7 states, 16 actual reference frames, 2 icons and editable native source complete. Independent 16x2 device expectations fixed; native Figma recovery/36 exports checked. Not approved, published or Android implemented."
+}
