@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2048 · Simulator Menu</title><link rel="stylesheet" href="menu.css"></head>
+<body><main id="menu" class="screen"><div class="eyebrow">A LITTLE EVERY DAY</div>
+<h1>2048<span class="spark">✦</span></h1><p class="tagline">Make room for your next move.</p>
+<div class="score"><span>YOUR BEST</span><strong id="best">128</strong></div>
+<nav aria-label="Game menu"><button id="continue" class="secondary" disabled>Continue</button>
+<button id="new-game" class="primary">New game <span aria-hidden="true">→</span></button>
+<button id="reset-best" class="quiet">Reset best score</button></nav>
+<footer>Swipe. Combine. Keep going.</footer></main>
+<main id="session" class="screen" hidden><div class="eyebrow">YOUR NEXT MOVE</div><h2>Let’s begin.</h2>
+<div class="board" aria-label="Session preview"><span>2</span><span>2</span><span></span><span></span></div>
+<p class="tagline">Session started.</p><button id="menu-back" class="secondary">Menu</button>
+<footer>Every move is a new beginning.</footer></main>
+<dialog id="reset-dialog" aria-labelledby="reset-title"><div class="dialog-mark" aria-hidden="true">↺</div>
+<h2 id="reset-title">A fresh start?</h2><p>Your best score will return to zero.<br><span id="reset-detail">You can start a new session next.</span></p>
+<div class="dialog-actions"><button id="cancel" class="secondary">Cancel</button><button id="confirm-reset" class="primary">Reset</button></div></dialog>
+<script src="menu.js"></script></body></html>

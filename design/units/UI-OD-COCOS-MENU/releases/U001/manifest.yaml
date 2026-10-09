@@ -1,0 +1,416 @@
+{
+  "schema_version": "ui-design/1",
+  "unit": "UI-OD-COCOS-MENU",
+  "release": "U001",
+  "producer": {
+    "mode": "ai",
+    "tool_observation_ref": "sources.md"
+  },
+  "brief_ref": "brief.md",
+  "requirement_refs": [
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "77edfd556a27df96afb16197fe3f59bb48ead340",
+      "path": "inputs/supplementary-20261009/scope.md",
+      "sha256": "60c6534443bfa215a9aafe7169eba1bc07eb39675d2fb1fc6e7793e351dc6066"
+    }
+  ],
+  "platforms": [
+    {
+      "target": "Cocos Creator 3.8.8 Android arm64-v8a; Android 17/API 37 simulator only",
+      "units": "375 UI-unit FIT_WIDTH canvas; px = UI units * actual render width / 375",
+      "orientation": "portrait",
+      "locale": "en",
+      "reference_sizes": [
+        {
+          "device": "Harness_UI_Small_20261009",
+          "px": [
+            720,
+            1280
+          ]
+        },
+        {
+          "device": "Harness_UI_Regular_20261009",
+          "px": [
+            1080,
+            2400
+          ]
+        }
+      ],
+      "constraints": "See brief.md and independently fixed expected: density 320/420, 16 KB pages, exact fingerprint; no physical-device claim."
+    }
+  ],
+  "screens": [
+    {
+      "id": "menu",
+      "states": [
+        "default",
+        "resumable",
+        "zero-empty",
+        "zero-resumable"
+      ],
+      "handoff_path": "handoff.md"
+    },
+    {
+      "id": "dialog",
+      "states": [
+        "reset-empty",
+        "reset-resumable"
+      ],
+      "handoff_path": "handoff.md"
+    },
+    {
+      "id": "session",
+      "states": [
+        "active"
+      ],
+      "handoff_path": "handoff.md"
+    }
+  ],
+  "states": [
+    {
+      "id": "menu/default",
+      "reference": "references.html",
+      "parameters": "Select default; equivalent index.html?state=default; both 375x667 and 375x833 references. Dialog/session best=0 variant via checkbox; see handoff."
+    },
+    {
+      "id": "menu/resumable",
+      "reference": "references.html",
+      "parameters": "Select resumable; equivalent index.html?state=resumable; both 375x667 and 375x833 references. Dialog/session best=0 variant via checkbox; see handoff."
+    },
+    {
+      "id": "menu/zero-empty",
+      "reference": "references.html",
+      "parameters": "Select zero-empty; equivalent index.html?state=zero-empty; both 375x667 and 375x833 references. Dialog/session best=0 variant via checkbox; see handoff."
+    },
+    {
+      "id": "menu/zero-resumable",
+      "reference": "references.html",
+      "parameters": "Select zero-resumable; equivalent index.html?state=zero-resumable; both 375x667 and 375x833 references. Dialog/session best=0 variant via checkbox; see handoff."
+    },
+    {
+      "id": "dialog/reset-empty",
+      "reference": "references.html",
+      "parameters": "Select reset-empty; equivalent index.html?state=reset-empty; both 375x667 and 375x833 references. Dialog/session best=0 variant via checkbox; see handoff."
+    },
+    {
+      "id": "dialog/reset-resumable",
+      "reference": "references.html",
+      "parameters": "Select reset-resumable; equivalent index.html?state=reset-resumable; both 375x667 and 375x833 references. Dialog/session best=0 variant via checkbox; see handoff."
+    },
+    {
+      "id": "session/active",
+      "reference": "references.html",
+      "parameters": "Select active; equivalent index.html?state=active; both 375x667 and 375x833 references. Dialog/session best=0 variant via checkbox; see handoff."
+    }
+  ],
+  "flows": [
+    {
+      "id": "new",
+      "from": "menu/default",
+      "trigger": "New game",
+      "to": "session/active",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "return",
+      "from": "session/active",
+      "trigger": "Menu or Android Back; retain existing best",
+      "to": "menu/resumable",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "continue",
+      "from": "menu/resumable",
+      "trigger": "Continue same session",
+      "to": "session/active",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "ask-empty",
+      "from": "menu/default",
+      "trigger": "Reset best score",
+      "to": "dialog/reset-empty",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "ask-session",
+      "from": "menu/resumable",
+      "trigger": "Reset best score",
+      "to": "dialog/reset-resumable",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "cancel-empty",
+      "from": "dialog/reset-empty",
+      "trigger": "Cancel or Android Back",
+      "to": "menu/default",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "cancel-session",
+      "from": "dialog/reset-resumable",
+      "trigger": "Cancel or Android Back",
+      "to": "menu/resumable",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "confirm-empty",
+      "from": "dialog/reset-empty",
+      "trigger": "Reset",
+      "to": "menu/zero-empty",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "confirm-session",
+      "from": "dialog/reset-resumable",
+      "trigger": "Reset",
+      "to": "menu/zero-resumable",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "continue-zero",
+      "from": "menu/zero-resumable",
+      "trigger": "Continue same session",
+      "to": "session/active",
+      "behavior_ref": "scope.md#menu"
+    },
+    {
+      "id": "new-zero",
+      "from": "menu/zero-empty",
+      "trigger": "New game",
+      "to": "session/active",
+      "behavior_ref": "scope.md#menu"
+    }
+  ],
+  "coverage": [
+    {
+      "behavior_ref": "scope.md#menu",
+      "screen_states": [
+        "menu/default",
+        "menu/resumable",
+        "menu/zero-empty",
+        "menu/zero-resumable",
+        "dialog/reset-empty",
+        "dialog/reset-resumable",
+        "session/active"
+      ]
+    },
+    {
+      "behavior_ref": "scope.md#lifecycle",
+      "screen_states": [
+        "menu/default",
+        "menu/resumable",
+        "menu/zero-empty",
+        "menu/zero-resumable",
+        "dialog/reset-empty",
+        "dialog/reset-resumable",
+        "session/active"
+      ]
+    },
+    {
+      "behavior_ref": "scope.md#visual-and-resources",
+      "screen_states": [
+        "menu/default",
+        "menu/resumable",
+        "menu/zero-empty",
+        "menu/zero-resumable",
+        "dialog/reset-empty",
+        "dialog/reset-resumable",
+        "session/active"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "LICENSE-kenney.txt",
+      "media_type": "text/plain",
+      "sha256": "69f7eaa5e05913b4d09cf5848f75390b5c3c9a409ef8555777803d9ca0c171fb",
+      "bytes": 565,
+      "purpose": "CC0 license",
+      "required_for_engineering": true
+    },
+    {
+      "path": "assets/menu-primary.png",
+      "media_type": "image/png",
+      "sha256": "0c43a01a95270167be8c05a68c45a2709e60177d9dfa59bedb56fd0802659e52",
+      "bytes": 784,
+      "purpose": "Design source or runtime button asset",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        384,
+        128
+      ]
+    },
+    {
+      "path": "assets/menu-secondary.png",
+      "media_type": "image/png",
+      "sha256": "f0f3d52f110768bf93a10b44f4ec3c727924c25734ce85e1275464c9b02cfe18",
+      "bytes": 786,
+      "purpose": "Design source or runtime button asset",
+      "required_for_engineering": true,
+      "dimensions_px": [
+        384,
+        128
+      ]
+    },
+    {
+      "path": "brief.md",
+      "media_type": "text/markdown",
+      "sha256": "4ea05c927165ec06af5855c44b645143cd20c2bc6e264e0b0dc7e885f03f976e",
+      "bytes": 3143,
+      "purpose": "Scope, target and lifecycle",
+      "required_for_engineering": true
+    },
+    {
+      "path": "expected-copy.json",
+      "media_type": "application/json",
+      "sha256": "b251aefad98cccbfde58554ea1042e2db17fb6803fb1f9fdcafe91f120658a47",
+      "bytes": 5137,
+      "purpose": "Copy of separately fixed independent device expectations",
+      "required_for_engineering": true
+    },
+    {
+      "path": "handoff.md",
+      "media_type": "text/markdown",
+      "sha256": "712fe7fbd781118413e688e3890a55dda0577e0a94a03ebbb0140fab72180a42",
+      "bytes": 5862,
+      "purpose": "States, mappings and allowed differences",
+      "required_for_engineering": true
+    },
+    {
+      "path": "index.html",
+      "media_type": "text/html",
+      "sha256": "6bfd233b9211f0bcb7ad90a8f1ef3c7fb581170018f35449564161e26fbe7335",
+      "bytes": 1604,
+      "purpose": "Editable interaction reference",
+      "required_for_engineering": true
+    },
+    {
+      "path": "iteration.md",
+      "media_type": "text/markdown",
+      "sha256": "dde54a3f13753686b7e6e2edbaf2ad0c511a2b6d5ec84b0f30d88525f5fbfbfc",
+      "bytes": 1520,
+      "purpose": "Actual candidate corrections",
+      "required_for_engineering": true
+    },
+    {
+      "path": "menu.css",
+      "media_type": "text/css",
+      "sha256": "06e171c94fc1df5192e183bbb489d90d448f2770fcd32cc25cd3450b4c3a2691",
+      "bytes": 2684,
+      "purpose": "Design source or runtime button asset",
+      "required_for_engineering": true
+    },
+    {
+      "path": "menu.js",
+      "media_type": "text/javascript",
+      "sha256": "3471b60a82b9a61b0670a0609d763ea2525f40649b7f6996198944a935862800",
+      "bytes": 1727,
+      "purpose": "Design source or runtime button asset",
+      "required_for_engineering": true
+    },
+    {
+      "path": "references.html",
+      "media_type": "text/html",
+      "sha256": "3777880f2ef76f49605231292495ca4874b67d2cec34fcaf6081a3de1e25ddc8",
+      "bytes": 2381,
+      "purpose": "Two-size human review entry",
+      "required_for_engineering": true
+    },
+    {
+      "path": "sources.md",
+      "media_type": "text/markdown",
+      "sha256": "1778a6f6ee95c79399cc3f43dbb3cad1a4a0c8cd8703a6a2555218f47792bd37",
+      "bytes": 1767,
+      "purpose": "Producer and source observation",
+      "required_for_engineering": true
+    },
+    {
+      "path": "tokens.json",
+      "media_type": "application/json",
+      "sha256": "f63f301464e53d46653da074884664a0aef033684c0c5dbec41322be7c110c31",
+      "bytes": 1653,
+      "purpose": "Design parameters",
+      "required_for_engineering": true
+    }
+  ],
+  "asset_inputs": [
+    {
+      "source_ref": {
+        "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+        "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+        "path": "inputs/archives/kenney_ui-pack.zip",
+        "sha256": "a8a14a234911eb648c062622915c93e79e94e97cb7f9f375a70f6617f1174318"
+      },
+      "license": "CC0; full text LICENSE-kenney.txt",
+      "transform": "Extract unchanged Yellow/Double and Grey/Double button_rectangle_depth_flat.png; preserve bytes, use 9-slice in consumer. Original input has no AST/DAS owner.",
+      "outputs": [
+        "assets/menu-primary.png",
+        "assets/menu-secondary.png",
+        "LICENSE-kenney.txt"
+      ]
+    },
+    {
+      "source_ref": {
+        "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+        "commit": "77edfd556a27df96afb16197fe3f59bb48ead340",
+        "path": "inputs/supplementary-20261009/tool-observations.zip",
+        "sha256": "ff648b26a016917189a84bc09eb80384584f35eb86493e7386b6d64dde7c8745"
+      },
+      "license": "Local author/tool observation evidence; no account credentials",
+      "transform": "Factual summary of actual MCP production, observed iteration, full capture, recovery and toolchain preflight; raw record retained in fixed ZIP.",
+      "outputs": [
+        "sources.md",
+        "iteration.md"
+      ]
+    }
+  ],
+  "external_objects": [],
+  "acceptance": {
+    "handoff_path": "handoff.md",
+    "expected_ref": {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "77edfd556a27df96afb16197fe3f59bb48ead340",
+      "path": "inputs/supplementary-20261009/cocos-expected.json",
+      "sha256": "b251aefad98cccbfde58554ea1042e2db17fb6803fb1f9fdcafe91f120658a47"
+    },
+    "required_states": [
+      "menu/default",
+      "menu/resumable",
+      "menu/zero-empty",
+      "menu/zero-resumable",
+      "dialog/reset-empty",
+      "dialog/reset-resumable",
+      "session/active"
+    ],
+    "allowed_differences": [
+      {
+        "id": "SYSTEM-GLYPHS",
+        "basis": "System font/antialiasing only; exact copy/tokens, centre <=2 UI units, baseline <=4, no clipping.",
+        "review_path": "handoff.md"
+      },
+      {
+        "id": "PIXEL-ROUNDING",
+        "basis": "At most one physical pixel edge rounding; no size/spacing rule changes.",
+        "review_path": "handoff.md"
+      },
+      {
+        "id": "OS-CHROME",
+        "basis": "Normal system chrome only; dismiss onboarding and keep controls within safe area.",
+        "review_path": "handoff.md"
+      }
+    ]
+  },
+  "limitations": [
+    "No physical-device performance acceptance",
+    "No complete 2048 gameplay",
+    "No cross-process save",
+    "TalkBack semantics not validated",
+    "No new human approval yet; this candidate does not grant Apply.",
+    "HTML is design reference, not native runtime result.",
+    "No Figma/Unity/Android App branch acceptance implied."
+  ],
+  "open_questions": []
+}
