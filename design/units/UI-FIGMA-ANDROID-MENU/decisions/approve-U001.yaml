@@ -1,0 +1,81 @@
+{
+  "schema_version": "ui-decision/1",
+  "decision_id": "approve-UI-FIGMA-ANDROID-MENU-U001-20261010",
+  "kind": "approve",
+  "unit": "UI-FIGMA-ANDROID-MENU",
+  "release": "U001",
+  "package_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+    "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/manifest.yaml",
+    "sha256": "f14d153cd88a8d60a898c414876eec1f440520855840ee323c288d3da0f0cb55"
+  },
+  "closure_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "333bf9218436606de086280e8f54b1825402410f",
+    "path": "reviews/figma-android-20261009/candidate-closure.json",
+    "sha256": "c1c95df5c64575b43ef5f87bd1504ff5907f31492c807ca7f1bfe37c81ca2e34"
+  },
+  "scope": {
+    "platforms": [
+      {
+        "target": "Native Android App; Android 17 API 37 arm64-v8a emulator only",
+        "units": "dp layout, sp text; density 320/420; see handoff for fractional source and rounded export edges",
+        "orientation": "portrait",
+        "locale": "en",
+        "reference_sizes": [
+          {
+            "device": "Harness_UI_Small_20261009",
+            "px": [
+              720,
+              1280
+            ]
+          },
+          {
+            "device": "Harness_UI_Regular_20261009",
+            "px": [
+              1080,
+              2400
+            ]
+          }
+        ],
+        "constraints": "Fixed fingerprint and 16 KB pages in expected; font scales 1.0 and 1.3; native system insets; no physical-device or Unity claim."
+      }
+    ],
+    "screen_states": [
+      "menu/default",
+      "menu/resumable",
+      "menu/zero-empty",
+      "menu/zero-resumable",
+      "dialog/reset-empty",
+      "dialog/reset-resumable",
+      "session/active"
+    ]
+  },
+  "reviewers": [
+    {
+      "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+      "roles": [
+        "product",
+        "ui"
+      ],
+      "decision": "accepted",
+      "decided_at": "2026-10-10T09:53:17.917272+08:00",
+      "time_basis": "Captured after receiving the actual human reply; exact message send time is not exposed. Timezone Asia/Shanghai.",
+      "evidence_path": "user-approval-U001.json",
+      "evidence_sha256": "4add16f618132b1287468f6f35c456f3e3294a14fe2444a950b2dadb4a8efb47"
+    }
+  ],
+  "engineering_review_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "191cd85b86f9ddf3f3ba1e759c9527794afc540d",
+    "path": "inputs/figma-android-20261009/feasibility.md",
+    "sha256": "84734d521da0272d108681f0e10b55de603f72899e1401d4ceee32c704dd0ed1"
+  },
+  "limitations": [
+    "本次真实答复批准固定设计并授权按审核页清单保存 A、发布设计包；Android 工程 Review／Apply 和最终运行验收仍独立。",
+    "审核者身份依据是当前线程真实用户回复；未声称第三方平台身份认证。",
+    "固定 D、闭包和原审核页中尚未批准等字样保留当时语境；新决定不回写已审字节。",
+    "Unity 仍无可用许可，不由本设计批准覆盖。"
+  ]
+}

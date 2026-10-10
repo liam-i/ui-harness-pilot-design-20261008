@@ -1,0 +1,318 @@
+{
+  "source": "Actual human send_user_message_question_reply in this Codex thread",
+  "thread_id": "01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+  "question_item_id": "[\"request_user_input_async\",\"call_dc7e543d488d4934a05775b5508a18e8\",0]",
+  "question": "请审核 [Figma → Android 设计审核页](/Users/liam/Developer/workflow.md/ai-native-sdlc/engineering-harness/tests/ui-design/evidence/supplementary-20261009/figma-android-design/review/README.md)。是否通过固定设计 D=0c2b7c404648f448c794769357b7ed3c8abd013f，并允许按页内清单保存真实批准 A、发布到既有 GitHub 公开设计库？本次只批准设计及其交付，Android 工程 Apply 另行审核。",
+  "answer": "设计通过，保存批准并发布设计包",
+  "recorded_at": "2026-10-10T09:53:17.917272+08:00",
+  "time_basis": "Captured after receiving the actual human reply; exact message send time is not exposed. Timezone Asia/Shanghai.",
+  "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+  "roles": [
+    "product",
+    "ui"
+  ],
+  "package_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+    "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/manifest.yaml",
+    "sha256": "f14d153cd88a8d60a898c414876eec1f440520855840ee323c288d3da0f0cb55"
+  },
+  "closure_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "333bf9218436606de086280e8f54b1825402410f",
+    "path": "reviews/figma-android-20261009/candidate-closure.json",
+    "sha256": "c1c95df5c64575b43ef5f87bd1504ff5907f31492c807ca7f1bfe37c81ca2e34"
+  },
+  "policy_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "03eefa28dc36a22e807a5c8147359ddf0be97d9f",
+    "path": "reviews/supplementary-20261009/policy.json",
+    "sha256": "bba599d11d0e6d6be602e2fdef50f785483b243910ecd193ca13cfbdb4ba9753"
+  },
+  "reviewed_page": {
+    "path": "/Users/liam/Developer/workflow.md/ai-native-sdlc/engineering-harness/tests/ui-design/evidence/supplementary-20261009/figma-android-design/review/README.md",
+    "sha256": "82d078ec6f6f05d0cb025a597722242c659fe80fa0c4e2e18e3f2dd765522349",
+    "content": "# Figma → Android 设计审核\n\n状态：候选已固定并通过文件／恢复检查，等待真人设计批准；尚无 A、远程发布或 Android 工程 Apply。这里只审核本次设计及交付范围，运行验收仍在实现后进行。\n\n## 请审核这些内容\n\n1. 查看[全部 16 张实际导出图](package/references.html)，确认菜单、重置确认框和静态会话预览的视觉设计。包含小屏／常规屏和 1.0／1.3 字号；图片就是 Figma 导出，页面只负责展示。\n2. 确认[范围](package/brief.md)和[交接规则](package/handoff.md)：Continue 恢复同一会话；New game 建新会话；重置只清零分数，取消保留原状态。共 7 个状态，字号、安全区、资源和允许差异已经写明。\n3. 确认通过后，由 Codex 保存真实批准 A，并按下列清单发布到既有 UI 权威库，再准备原生 Android 工程规划。工程 Review／Apply、32 项设备测试、真实 CI 和最终运行验收按原流程继续。\n\n小屏大字号的三个主要画面如下；其他状态见完整参考页。\n\n| 菜单 | 重置确认 | 静态会话 |\n| --- | --- | --- |\n| ![小屏大字号菜单](package/references/small-f130-menu-default.png) | ![小屏大字号确认框](package/references/small-f130-dialog-reset-empty.png) | ![小屏大字号会话](package/references/small-f130-session-active.png) |\n\n也可查看[Figma 保存版本](https://www.figma.com/design/vDn0HRsZODL9T5pXEJ0kGG?version-id=2408310294589698663)。工程只消费下面固定的包，不依赖活动画稿。\n\n## 本次批准绑定什么\n\n| 对象 | 固定身份 |\n| --- | --- |\n| UI 单元 | `UI-FIGMA-ANDROID-MENU/U001` |\n| 内容 D | `0c2b7c404648f448c794769357b7ed3c8abd013f` |\n| [完整清单](package/manifest.yaml) SHA-256 | `f14d153cd88a8d60a898c414876eec1f440520855840ee323c288d3da0f0cb55` |\n| [闭包报告](candidate-closure.json)所在提交 | `333bf9218436606de086280e8f54b1825402410f` |\n| 闭包报告 SHA-256 | `c1c95df5c64575b43ef5f87bd1504ff5907f31492c807ca7f1bfe37c81ca2e34` |\n| 范围／独立预期输入 S | `191cd85b86f9ddf3f3ba1e759c9527794afc540d` |\n| 既有受审 [policy](policy.json) | `03eefa28dc36a22e807a5c8147359ddf0be97d9f`，本次保持不变 |\n\n设计包包含 45 个文件：36 项真实导出、可编辑 `.fig`、Brief、handoff、tokens、几何参数、独立预期副本、来源、修订记录及参考入口。清单不列自己；完整摘要见[固定引用](fixed-candidate.json)。[新范围](inputs/scope.md)、[权威及留存约定](inputs/authority.md)、[前置可行性](inputs/feasibility.md)和[独立 32 项预期](inputs/expected.json)均先于工程实现固定。\n\n审核者沿用当前用户的 product/ui 角色；本次决定只批准这个 D。原 Cocos／iOS 批准不会被改写，也不自动批准本包。\n\n## 已完成的检查与当前限制\n\n- Figma 实际生成、导出反馈修订、原生属性修正、重开回读已执行。新恢复稿保留 14 个本地组件与可编辑文字；[恢复后 36 项导出](../native-recovery-03.json)全部逐字节一致。\n- [媒体检查](../exports-check-03.json)通过；[缺图标、字节不一致、PNG 截断、原生源截断](../export-failure-recovery.json)均被拒绝，正确输入恢复通过。\n- [离线独立恢复](recovery-check.json)从 Git bundle 读取完整历史与 62 个固定对象，恢复全部 45 文件；[另核 6 个输入副本](review-inputs-check.json)。共同 checker、规则锁及原有 74 路径未改；没有伪造 A 来运行消费检查。\n- 首次闭包记录重复列入同一预期文件，被 Schema 拒绝；已按唯一对象集合修正记录。D 和设计字节未改，[失败原因](../closure-preflight-failure.json)保留。\n- 本次实际接入是浏览器／Figma 原生 Agent＋原生编辑＋文件交付，**Figma MCP 尚未验证**。保存版本已重开；全文件导出使用未改动的当前稿，未声称调用版本锁定导出 API。图形产物由 D 固定。\n- Android 空白探针只证明工具链可用；菜单工程、32 项设备用例、真实 CI 和运行人审尚未完成。Unity 缺可用许可，仍是本轮未完成义务；物理真机未验证。\n\n## 通过后的发布范围\n\n目的地是既有公开库 [ui-harness-pilot-design-20261008](https://github.com/liam-i/ui-harness-pilot-design-20261008) 的 `refs/heads/main`。本候选仅新增[清单所列 53 个文件](publication-inventory.json)：本单元的设计包、对应输入和闭包；取得真实答复后再新增本单元的 `approve-U001.yaml` 与 `user-approval-U001.json`。现有设计、批准和库设置保持原样。\n\n上传包括本次新草稿的 `.fig`、PNG／SVG、明确参数与已清点的制作观察；没有账号密码、密钥、外部项目图像或字体文件。来源说明不替用户授予 CC0 或其他开源许可证。[完整 bundle](design-candidate.bundle)和[包 ZIP](design-candidate.zip)已保存，可在活动 Figma 不可用时恢复相同内容。\n\n按用户已确认的规则及 [UI 交接 Skill](../../../../../../templates/ui-design/skills/ui-design-workflow/SKILL.md)：“真实人审批准这个 D 后才能保存 A 和发布；AI 不代签。”因此当前停在本页审核，不能把自动检查通过当成人工批准。\n"
+  },
+  "publication_inventory": {
+    "path": "/Users/liam/Developer/workflow.md/ai-native-sdlc/engineering-harness/tests/ui-design/evidence/supplementary-20261009/figma-android-design/review/publication-inventory.json",
+    "sha256": "7b50071465ecb82798e075a8224d5cb2256c477d9d69970dd48442f8d5ea407e",
+    "content": {
+      "base": "a5b141b41e194026841602967f3d4efe81dfb431",
+      "candidate_tip": "333bf9218436606de086280e8f54b1825402410f",
+      "destination": "https://github.com/liam-i/ui-harness-pilot-design-20261008.git",
+      "authority_ref": "refs/heads/main",
+      "new_files": [
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/assets/asset-arrow.png",
+          "bytes": 983,
+          "sha256": "4679df5d9e43ec326cf339f1674b5b24693ee9498767e3ad9a0292d0e5aba5e4"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/assets/asset-arrow.svg",
+          "bytes": 210,
+          "sha256": "17ef506ec82352e1a8baa357f22aa97eb47f50a3d0ab61d9486b416129f99cd2"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/assets/asset-reset.png",
+          "bytes": 1903,
+          "sha256": "7fb2df2ba768b634bf1ae49bfe556fcbcfc36d5179800a08e83bdc487e71440f"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/assets/asset-reset.svg",
+          "bytes": 590,
+          "sha256": "02a9d2cf24122cfcfa199a937705784220f7e6b03b5abefa47e2a9be99d7a07c"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/brief.md",
+          "bytes": 4499,
+          "sha256": "03efc355518c156d17e234546b3dec57455e4389f992ffb459412654a9d2ec42"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/expected-copy.json",
+          "bytes": 4917,
+          "sha256": "29b47ae955ab09ac1e0dc44198f5a1e206135d0df3d0c748e8841af461322e67"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/handoff.md",
+          "bytes": 7053,
+          "sha256": "22deacd3bed42e1c7d1a05f63e68d92d5baad04f5ee6b32c4ece170c4887f9e7"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/iteration.md",
+          "bytes": 1483,
+          "sha256": "28652779ce4f0f7189f9b7eea4b0118784af722aaa58cd0b5b24956db659bc93"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/manifest.yaml",
+          "bytes": 29570,
+          "sha256": "f14d153cd88a8d60a898c414876eec1f440520855840ee323c288d3da0f0cb55"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/reference-geometry.json",
+          "bytes": 58538,
+          "sha256": "099f288e7240ee24f4c6d7ccdf7e9b2028a09692b1ca383d2805478efc550ed3"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references.html",
+          "bytes": 6929,
+          "sha256": "25a44c5810053570db768582bced392d1155d2acc5febc84d97fecabb2ae6f20"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-dialog-reset-empty.png",
+          "bytes": 30185,
+          "sha256": "f7d7ac3edf7e62259796748779708b506bd22e49e207a092f8cc5a85782c6c6a"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-dialog-reset-empty.svg",
+          "bytes": 194261,
+          "sha256": "e0ad37c0318c0e217840ccf45b9d382b31bd9997c4a681be9eb3ec10389b48e0"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-menu-default.png",
+          "bytes": 22654,
+          "sha256": "09b8c5472869b6e5d4386e980d20b7abc7407f62c1b6494b34a64bf6ee11d785"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-menu-default.svg",
+          "bytes": 107895,
+          "sha256": "a1a97d8c75aee27cc6f8e2b660bc3e14509843da375af259f66eb78903fa1578"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-session-active.png",
+          "bytes": 14696,
+          "sha256": "bb3e7008c20c31fd600ad71b036b20aad482a985fdf6688b27ea2f2d3e3d38c5"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f100-session-active.svg",
+          "bytes": 36862,
+          "sha256": "6d01f26fe43489a0e933c01d72c780bd101024385f664dff16a46ff58555bcaf"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-dialog-reset-empty.png",
+          "bytes": 35540,
+          "sha256": "36de51c76d645487a509bad537a8902745069b09a092f2e8801eccf92e599e13"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-dialog-reset-empty.svg",
+          "bytes": 194434,
+          "sha256": "a8908335c0e181adf2b73ae941584580ef58b3e7a1d1749ce248fefe1636624b"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-menu-default.png",
+          "bytes": 26850,
+          "sha256": "3adfc11fc4886ee4e7739a89dd0e69cbe371a6c62529e88502d1951c01240fb6"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-menu-default.svg",
+          "bytes": 107979,
+          "sha256": "7ad2fc800e4e23b0f530fa471b60108f82f0fe0f356ff16f4079b691a5d56e5a"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-session-active.png",
+          "bytes": 16607,
+          "sha256": "960d31a23d2f184c6456deeba65a01e8bd072cdc1dd45b4294abeaa97b213f28"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/regular-f130-session-active.svg",
+          "bytes": 37077,
+          "sha256": "5a1bed5d603d9a0ddad6d12ba388af486351a5ff434e36787cc5418eb525c549"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-dialog-reset-empty.png",
+          "bytes": 27651,
+          "sha256": "456bf07486f5b45912a0ae94cdbdbbee2fa3336137b7775cd9dde862ab98c79c"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-dialog-reset-empty.svg",
+          "bytes": 193458,
+          "sha256": "594e3e6cd091cc1d47f78926ebad008524a70f7ddc55c0be283f1ed1d3a5269d"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-dialog-reset-resumable.png",
+          "bytes": 27651,
+          "sha256": "456bf07486f5b45912a0ae94cdbdbbee2fa3336137b7775cd9dde862ab98c79c"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-dialog-reset-resumable.svg",
+          "bytes": 193512,
+          "sha256": "7a29de6607f8c38f0ab95492dcdf1a3e86e8961ed71fa62eaceffbff87b422a9"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-default.png",
+          "bytes": 20613,
+          "sha256": "003d106b57ab9fe14672c5acb88d34a86b2773591c06cb0002fae6a80cc97c7a"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-default.svg",
+          "bytes": 107486,
+          "sha256": "d359c62c03e1dc6cc5da57060e2aac162a6207a9ebd219ffe665b0177991fbdd"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-resumable.png",
+          "bytes": 20979,
+          "sha256": "efa3d840c8aad3225f94c0aa934158662a470182b9c843a29c189fcd461c0d54"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-resumable.svg",
+          "bytes": 107540,
+          "sha256": "f976fe4b4ee301ae45da0e5846af8c584b94022307544a68ce29f48c43d96e52"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-zero-empty.png",
+          "bytes": 19985,
+          "sha256": "2b8190a586be793e08d98e5fbfa621f99f9adc2b2174f353b2d6e0ba31b4f4e5"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-zero-empty.svg",
+          "bytes": 105815,
+          "sha256": "182082862cf992960c5311f2532b085f4adff0b0aa8d996167811f001fc3422b"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-zero-resumable.png",
+          "bytes": 20352,
+          "sha256": "8df94b5bcf0e54ad23345653c96772e3d76ea34c7ab45130214ea7a937a97ad1"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-menu-zero-resumable.svg",
+          "bytes": 105869,
+          "sha256": "795d656c56c197645c9ae158d90dacdb17500376435dedee72d1c8a5c3a68b49"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-session-active.png",
+          "bytes": 12955,
+          "sha256": "ac339aab5405fe88851a10f60f5ffd655799eb5252d861c081333bdec5c22f10"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f100-session-active.svg",
+          "bytes": 36717,
+          "sha256": "9b4f444a4f1aa8867d71bb24971a07f768ac28e96dbad79d472be47c0f5c64c9"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-dialog-reset-empty.png",
+          "bytes": 31078,
+          "sha256": "e03b6253093585b88056cb9662482e0e785eed38ca10b3ef87c8777599472a1f"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-dialog-reset-empty.svg",
+          "bytes": 193635,
+          "sha256": "94ea322aca48ad6a35b711dac0b638aee0372d643f7d83187a4b75dcff5eada3"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-menu-default.png",
+          "bytes": 24509,
+          "sha256": "3c4cc100ee503313fa5f0293623a8d1b8374aebc9edac4947fc4cf1bf224cf5d"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-menu-default.svg",
+          "bytes": 107703,
+          "sha256": "7f5f8885030ff7bf67ae8fa18bc13d4446ef42d13e6e40e46094ddce7425f7f7"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-session-active.png",
+          "bytes": 14869,
+          "sha256": "43f98fcf1837503f3fedbfbb61e6dc4f5af104c20c27abee37a30694d45b5658"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/references/small-f130-session-active.svg",
+          "bytes": 36960,
+          "sha256": "19e91450a262c82764d71da052f997eea4b3173c890a5a4dd63811b1bf6c36b9"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/source/native-source.fig",
+          "bytes": 108877,
+          "sha256": "f5b352b2958ef5d80ba898ac4ac54718fe1a1cedb67fef5eee0422129108529c"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/sources.md",
+          "bytes": 3307,
+          "sha256": "deade027825d63ae3beaaf94b3373709689c59faaa3da6524b34a7e66616f755"
+        },
+        {
+          "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/tokens.json",
+          "bytes": 2024,
+          "sha256": "cd1095044ca4e5e270dc788a43b76615bb37b6adc62cd708a888809c0c56eb72"
+        },
+        {
+          "path": "inputs/figma-android-20261009/authority.md",
+          "bytes": 1575,
+          "sha256": "b19b02fd6ab0ff5a1454259b839cd53d7b28e3ea2a0e3fdd8f131a4dac2fafc5"
+        },
+        {
+          "path": "inputs/figma-android-20261009/confirmed-plan.md",
+          "bytes": 36588,
+          "sha256": "462ff1f0e66025231689401f28c45b3a80572365c5211cfa3b63a528f59e97a6"
+        },
+        {
+          "path": "inputs/figma-android-20261009/expected.json",
+          "bytes": 4917,
+          "sha256": "29b47ae955ab09ac1e0dc44198f5a1e206135d0df3d0c748e8841af461322e67"
+        },
+        {
+          "path": "inputs/figma-android-20261009/feasibility.md",
+          "bytes": 988,
+          "sha256": "84734d521da0272d108681f0e10b55de603f72899e1401d4ceee32c704dd0ed1"
+        },
+        {
+          "path": "inputs/figma-android-20261009/scope.md",
+          "bytes": 2765,
+          "sha256": "9ff514d8bff8f154df9a58e5618cdbed43d5010e14a2dffff1ae1cd3cc64e12b"
+        },
+        {
+          "path": "inputs/figma-android-20261009/tool-observations.zip",
+          "bytes": 204484,
+          "sha256": "80a76ff561bd5a05339b3179852a9e2bed280fd193ea8eee96ec622f67de2747"
+        },
+        {
+          "path": "reviews/figma-android-20261009/candidate-closure.json",
+          "bytes": 19057,
+          "sha256": "c1c95df5c64575b43ef5f87bd1504ff5907f31492c807ca7f1bfe37c81ca2e34"
+        }
+      ],
+      "existing_paths_modified": 0,
+      "publication_performed": false,
+      "after_approval_only": "Add actual approve-U001.yaml and user-approval-U001.json under new unit decisions, then authorized publication; no credential, sharing or repository settings change."
+    }
+  },
+  "scope": "Approve exact D and complete displayed scope; save actual A and publish the reviewed 53 new files plus this unit approval/evidence to the existing public authority repository. Does not authorize Android engineering Apply, a new runtime repository/CI configuration, final runtime acceptance or Unity license acceptance."
+}
